@@ -5,6 +5,7 @@ struct CreateQuote: Migration {
         return database.schema(Quote.schema)
             .id()
             .field("title", .string, .required)
+            .field("quote", .string, .required)
             .create()
     }
 

@@ -9,11 +9,15 @@ final class Quote: Model, Content {
 
     @Field(key: "title")
     var title: String
+    
+    @Field(key: "quote")
+    var quote: String
 
     init() { }
 
-    init(id: UUID? = nil, title: String) {
+    init(id: UUID? = nil, title: String, quote: String) {
         self.id = id
         self.title = title
+        self.quote = quote
     }
 }
